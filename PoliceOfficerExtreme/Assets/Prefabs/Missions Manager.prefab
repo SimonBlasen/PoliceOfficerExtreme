@@ -51,6 +51,8 @@ MonoBehaviour:
   firstPersonPlayer: {fileID: 0}
   camCar: {fileID: 0}
   enterCarDistance: 3
+  carPoliceStationDistance: 5
+  policeStationPos: {fileID: 0}
 --- !u!82 &6142875725155417681
 AudioSource:
   m_ObjectHideFlags: 0
