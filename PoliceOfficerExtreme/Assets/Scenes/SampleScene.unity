@@ -48518,6 +48518,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 408171621}
     - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
+      propertyPath: robberAgentMover
+      value: 
+      objectReference: {fileID: 350569295}
+    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
       propertyPath: firstPersonPlayer
       value: 
       objectReference: {fileID: 248511425}
@@ -48525,6 +48529,10 @@ PrefabInstance:
       propertyPath: missions.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
+      propertyPath: robberRigAgentManager
+      value: 
+      objectReference: {fileID: 350569294}
     - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
       propertyPath: missions.Array.data[1]
       value: 
