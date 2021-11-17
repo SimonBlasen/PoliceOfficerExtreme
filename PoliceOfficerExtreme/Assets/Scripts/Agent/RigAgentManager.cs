@@ -27,9 +27,9 @@ public class RigAgentManager : MonoBehaviour
         agentMover = GetComponent<AgentMover>();
         navMeshAgent = GetComponent<NavMeshAgent>();
 
-        enDisRigids(false);
+        //enDisRigids(false);
 
-        enDisMeshes(true);
+        //enDisMeshes(true);
     }
 
     // Update is called once per frame
