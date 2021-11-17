@@ -56,6 +56,12 @@ public class RigAgentManager : MonoBehaviour
             rigidDude.transform.position = transform.position;
             rigidDude.transform.rotation = transform.rotation;
 
+            AgentRigOriginPos[] origPoses = rigidDude.GetComponentsInChildren<AgentRigOriginPos>();
+            for (int i = 0; i < origPoses.Length; i++)
+            {
+                origPoses[i].ResetPose();
+            }
+
             Rigidbody[] rigids = rigidDude.GetComponentsInChildren<Rigidbody>();
 
             Vector3 randAngVel = new Vector3(Random.Range(-hitAngularStrength, hitAngularStrength), Random.Range(-hitAngularStrength, hitAngularStrength), Random.Range(-hitAngularStrength, hitAngularStrength));

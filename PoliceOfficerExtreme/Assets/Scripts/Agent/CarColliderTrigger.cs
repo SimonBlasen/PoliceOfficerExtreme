@@ -39,7 +39,7 @@ public class CarColliderTrigger : MonoBehaviour
             else
             {
                 agentMover.PlayPassantClip();
-                agentMover.ReviveIn(Random.Range(20f, 30f));
+                agentMover.ReviveIn(Random.Range(2f, 3f));
             }
             rigAgentManager.MakeRigid(cc.Velocity);
         }

@@ -38932,15 +38932,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331650816769881829, guid: 0dcf2a729246b5c41bd283aceb37ecf2, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0020000935
+      value: 0.0020008087
       objectReference: {fileID: 0}
     - target: {fileID: 7331650816769881830, guid: 0dcf2a729246b5c41bd283aceb37ecf2, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0020000935
+      value: 0.0020008087
       objectReference: {fileID: 0}
     - target: {fileID: 7331650816769881831, guid: 0dcf2a729246b5c41bd283aceb37ecf2, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.0060003
+      value: -1.0060008
       objectReference: {fileID: 0}
     - target: {fileID: 7992356873204491532, guid: 0dcf2a729246b5c41bd283aceb37ecf2, type: 3}
       propertyPath: m_Name
