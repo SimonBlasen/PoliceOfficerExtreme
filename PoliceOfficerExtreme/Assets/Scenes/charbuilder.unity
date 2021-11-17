@@ -1146,6 +1146,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3dbd8c3df34e941945a0c537bbb3a8, type: 3}
+--- !u!1001 &5351196905066385208
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0249703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065698, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128936811509065699, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
+      propertyPath: m_Name
+      value: Pascal Passant RIG
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 123bf489ce6f92a47aca62d6bfb1ee0f, type: 3}
 --- !u!1001 &6569560045764275108
 PrefabInstance:
   m_ObjectHideFlags: 0
