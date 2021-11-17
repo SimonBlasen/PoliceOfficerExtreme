@@ -64,4 +64,9 @@ public class AgentMover : MonoBehaviour
     {
         transform.position = spawnPositions[Random.Range(0, spawnPositions.Length)].position;
     }
+
+    public void SpawnAt(Vector3 point)
+    {
+        transform.position = point;
+    }
 }

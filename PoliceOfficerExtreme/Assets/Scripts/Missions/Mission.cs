@@ -12,6 +12,7 @@ public enum MissionEventType
 [CreateAssetMenu(fileName = "Mission", menuName = "ScriptableObjects/Mission", order = 1)]
 public class Mission : ScriptableObject
 {
+    public Vector3 startRunningPosition;
     public DialogueText[] missionEvents;
 }
 

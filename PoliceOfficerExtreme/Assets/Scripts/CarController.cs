@@ -22,6 +22,8 @@ public class CarController : MonoBehaviour
     private float steerAngle = 12f;
     [SerializeField]
     private AudioSource audioSourceHitDude;
+    [SerializeField]
+    private Transform firstPersonSpawnPos;
 
     private Rigidbody rig;
 
@@ -86,6 +88,19 @@ public class CarController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            for (int i = 0; i < wheelsThrottle.Length; i++)
+            {
+                wheelsThrottle[i].motorTorque = 0f;
+                wheelsThrottle[i].brakeTorque = brakeTorque;
+            }
+            for (int i = 0; i < wheelsSteer.Length; i++)
+            {
+                wheelsSteer[i].motorTorque = 0f;
+                wheelsSteer[i].brakeTorque = brakeTorque;
+            }
+        }
     }
 
     public Vector3 Velocity
@@ -105,4 +120,13 @@ public class CarController : MonoBehaviour
     {
         get; set;
     } = true;
+
+
+    public Transform FirstPersonSpawnPos
+    {
+        get
+        {
+            return firstPersonSpawnPos;
+        }
+    }
 }
