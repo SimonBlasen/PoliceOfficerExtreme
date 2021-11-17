@@ -48,6 +48,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04e539513a28d8c4dbf48ee6aa8627b1, type: 2}
   dialogue: {fileID: 0}
   dialogueClipSource: {fileID: 6142875725155417681}
+  firstPersonPlayer: {fileID: 0}
+  camCar: {fileID: 0}
+  enterCarDistance: 3
 --- !u!82 &6142875725155417681
 AudioSource:
   m_ObjectHideFlags: 0

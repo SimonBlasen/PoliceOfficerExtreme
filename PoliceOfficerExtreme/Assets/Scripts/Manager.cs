@@ -12,15 +12,32 @@ public class Manager : MonoBehaviour
     private Dialogue dialogue = null;
     [SerializeField]
     private AudioSource dialogueClipSource = null;
+    [SerializeField]
+    private GameObject firstPersonPlayer = null;
+    [SerializeField]
+    private Camera camCar = null;
+    [SerializeField]
+    private float enterCarDistance = 1f;
+    [SerializeField]
+    private float carPoliceStationDistance = 1f;
+    [SerializeField]
+    private Transform policeStationPos = null;
 
     private int missionEventIndex = -1;
     private Mission currentMission = null;
 
     private float blockSpaceKeyFor = 0f;
+    private CarController cc;
+    private RigAgentManager rigAgentManager;
+    private AgentMover agentMover;
 
     // Start is called before the first frame update
     void Start()
     {
+        rigAgentManager = FindObjectOfType<RigAgentManager>();
+        agentMover = FindObjectOfType<AgentMover>();
+        cc = FindObjectOfType<CarController>();
+        IsFirstPerson = true;
         StartMission(Random.Range(0, missions.Length));
     }
 
@@ -40,6 +57,29 @@ public class Manager : MonoBehaviour
                     blockSpaceKeyFor = 1f;
                     dialogue.StopShowingText();
                     Invoke("nextMissionEvent", blockSpaceKeyFor);
+                }
+            }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (IsFirstPerson)
+            {
+                if (Vector3.Distance(cc.transform.position, firstPersonPlayer.transform.position) <= enterCarDistance)
+                {
+                    IsFirstPerson = false;
+
+                    EnterCar();
+                }
+            }
+            else
+            {
+                IsFirstPerson = true;
+
+                if (Vector3.Distance(cc.transform.position, policeStationPos.position) <= carPoliceStationDistance)
+                {
+                    ReturnPoliceStation();
                 }
             }
         }
@@ -82,6 +122,9 @@ public class Manager : MonoBehaviour
     {
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.ENTER_CAR)
         {
+            rigAgentManager.MakeNavigationAgent();
+            agentMover.SpawnAt(currentMission.startRunningPosition);
+            agentMover.RunToRandomTarget();
             nextMissionEvent();
         }
     }
@@ -101,4 +144,37 @@ public class Manager : MonoBehaviour
 
         nextMissionEvent();
     }
+
+    public bool IsFirstPerson
+    {
+        get
+        {
+            return isFirstPerson;
+        }
+        set
+        {
+            bool wasFirstPerson = isFirstPerson;
+            isFirstPerson = value;
+
+            if (isFirstPerson != wasFirstPerson)
+            {
+                cc.IsActive = !isFirstPerson;
+                camCar.enabled = !isFirstPerson;
+
+
+                if (isFirstPerson)
+                {
+                    RaycastHit hit;
+                    firstPersonPlayer.transform.position = cc.FirstPersonSpawnPos.position;
+                    if (Physics.Raycast(new Ray(cc.FirstPersonSpawnPos.position + Vector3.up * 200f, Vector3.down), out hit, 400f))
+                    {
+                        firstPersonPlayer.transform.position = hit.point + new Vector3(0f, 2f, 0f);
+                    }
+                }
+                firstPersonPlayer.SetActive(isFirstPerson);
+            }
+        }
+    }
+
+    private bool isFirstPerson = false;
 }
