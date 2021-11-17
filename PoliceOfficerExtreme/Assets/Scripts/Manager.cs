@@ -22,23 +22,25 @@ public class Manager : MonoBehaviour
     private float carPoliceStationDistance = 1f;
     [SerializeField]
     private Transform policeStationPos = null;
+    [SerializeField]
+    private RigAgentManager robberRigAgentManager = null;
+    [SerializeField]
+    private AgentMover robberAgentMover = null;
 
     private int missionEventIndex = -1;
     private Mission currentMission = null;
 
     private float blockSpaceKeyFor = 0f;
     private CarController cc;
-    private RigAgentManager rigAgentManager;
-    private AgentMover agentMover;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigAgentManager = FindObjectOfType<RigAgentManager>();
-        agentMover = FindObjectOfType<AgentMover>();
         cc = FindObjectOfType<CarController>();
         IsFirstPerson = true;
         StartMission(Random.Range(0, missions.Length));
+
+        robberRigAgentManager.IsVisible = false;
     }
 
     // Update is called once per frame
@@ -122,9 +124,10 @@ public class Manager : MonoBehaviour
     {
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.ENTER_CAR)
         {
-            rigAgentManager.MakeNavigationAgent();
-            agentMover.SpawnAt(currentMission.startRunningPosition);
-            agentMover.RunToRandomTarget();
+            robberRigAgentManager.IsVisible = true;
+            robberRigAgentManager.MakeNavigationAgent();
+            robberAgentMover.SpawnAt(currentMission.startRunningPosition);
+            robberAgentMover.RunToRandomTarget();
             nextMissionEvent();
         }
     }
@@ -141,8 +144,9 @@ public class Manager : MonoBehaviour
     {
         missionEventIndex = -1;
         currentMission = missions[index];
+        robberRigAgentManager.IsVisible = false;
 
-        rigAgentManager.MakeRigid(Vector3.zero);
+        //rigAgentManager.MakeRigid(Vector3.zero);
 
         nextMissionEvent();
     }

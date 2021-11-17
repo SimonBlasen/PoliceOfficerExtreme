@@ -33,13 +33,19 @@ public class CarColliderTrigger : MonoBehaviour
 
             if (agentMover.IsRobber)
             {
-                cc.HitRobber();
+                if (rigAgentManager.IsRigidPerson == false)
+                {
+                    cc.HitRobber();
+                }
                 manager.HitRobber();
             }
             else
             {
-                agentMover.PlayPassantClip();
-                agentMover.ReviveIn(Random.Range(10f, 15f));
+                if (rigAgentManager.IsRigidPerson == false)
+                {
+                    agentMover.PlayPassantClip();
+                    agentMover.ReviveIn(Random.Range(10f, 15f));
+                }
             }
             rigAgentManager.MakeRigid(cc.Velocity);
         }

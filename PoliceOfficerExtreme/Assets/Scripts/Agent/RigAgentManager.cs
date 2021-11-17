@@ -21,6 +21,8 @@ public class RigAgentManager : MonoBehaviour
     [SerializeField]
     private MeshRenderer[] nonRigidMeshes = null;
 
+    bool inited = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,19 +32,32 @@ public class RigAgentManager : MonoBehaviour
         //enDisRigids(false);
 
         //enDisMeshes(true);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!inited)
         {
+            isRigidPerson = true;
             MakeNavigationAgent();
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {/*
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            MakeNavigationAgent();
+        }*/
+    }
+
     public void MakeRigid(Vector3 velocityImpact)
     {
+        if (agentMover == null)
+        {
+            agentMover = GetComponent<AgentMover>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        inited = true;
         bool wasRigidPerson = isRigidPerson;
         isRigidPerson = true;
 
@@ -78,6 +93,13 @@ public class RigAgentManager : MonoBehaviour
 
     public void MakeNavigationAgent()
     {
+        if (agentMover == null)
+        {
+            agentMover = GetComponent<AgentMover>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        inited = true;
         bool wasRigidPerson = isRigidPerson;
         isRigidPerson = false;
 
@@ -93,6 +115,21 @@ public class RigAgentManager : MonoBehaviour
 
     }
 
+    private bool isVisible = true;
+    public bool IsVisible
+    {
+        get
+        {
+            return isVisible;
+        }
+        set
+        {
+            isVisible = value;
+
+            enDisMeshes(IsVisible);
+        }
+    }
+
     private void enDisRigids(bool enable)
     {
         rigidDude.SetActive(enable);
@@ -102,7 +139,7 @@ public class RigAgentManager : MonoBehaviour
     {
         for (int i = 0; i < nonRigidMeshes.Length; i++)
         {
-            nonRigidMeshes[i].enabled = enable;
+            nonRigidMeshes[i].enabled = enable && isVisible;
         }
     }
 
