@@ -28,6 +28,7 @@ public class CarColliderTrigger : MonoBehaviour
         {
             Debug.Log("Robber was hit by car");
 
+            cc.HitRobber();
             rigAgentManager.MakeRigid(cc.Velocity);
             manager.HitRobber();
         }
