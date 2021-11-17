@@ -26,7 +26,7 @@ public class RadioManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
-            if(sender < 3)
+            if(sender < radioNames.Length -1)
             {
                 sender += 1;
             }
