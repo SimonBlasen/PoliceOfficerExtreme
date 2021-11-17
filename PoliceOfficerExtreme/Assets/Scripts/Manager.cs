@@ -54,7 +54,7 @@ public class Manager : MonoBehaviour
             {
                 if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.DIALOGUE)
                 {
-                    blockSpaceKeyFor = 1f;
+                    blockSpaceKeyFor = 0.1f;
                     dialogue.StopShowingText();
                     Invoke("nextMissionEvent", blockSpaceKeyFor);
                 }
@@ -141,6 +141,8 @@ public class Manager : MonoBehaviour
     {
         missionEventIndex = -1;
         currentMission = missions[index];
+
+        rigAgentManager.MakeRigid(Vector3.zero);
 
         nextMissionEvent();
     }
