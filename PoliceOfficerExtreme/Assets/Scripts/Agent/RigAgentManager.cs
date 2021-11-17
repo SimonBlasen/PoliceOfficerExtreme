@@ -9,6 +9,8 @@ public class RigAgentManager : MonoBehaviour
     private float hitImpactFactor = 1f;
     [SerializeField]
     private float hitUpForce = 1f;
+    [SerializeField]
+    private float hitAngularStrength = 1f;
 
     private AgentMover agentMover;
 
@@ -53,11 +55,13 @@ public class RigAgentManager : MonoBehaviour
 
             Rigidbody[] rigids = rigidDude.GetComponentsInChildren<Rigidbody>();
 
+            Vector3 randAngVel = new Vector3(Random.Range(-hitAngularStrength, hitAngularStrength), Random.Range(-hitAngularStrength, hitAngularStrength), Random.Range(-hitAngularStrength, hitAngularStrength));
+
             for (int i = 0; i < rigids.Length; i++)
             {
                 Rigidbody rig = rigids[i];
                 rig.velocity = velocityImpact * hitImpactFactor + Vector3.up * velocityImpact.magnitude * hitUpForce;
-                rig.angularVelocity = Vector3.zero;
+                rig.angularVelocity = randAngVel;
             }
 
         }
