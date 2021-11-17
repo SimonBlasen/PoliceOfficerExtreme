@@ -9,10 +9,13 @@ public class CarColliderTrigger : MonoBehaviour
 
     private Manager manager;
 
+    private AgentMover agentMover;
+
     // Start is called before the first frame update
     void Start()
     {
         manager = FindObjectOfType<Manager>();
+        agentMover = GetComponentInParent<AgentMover>();
     }
 
     // Update is called once per frame
@@ -28,9 +31,17 @@ public class CarColliderTrigger : MonoBehaviour
         {
             Debug.Log("Robber was hit by car");
 
-            cc.HitRobber();
+            if (agentMover.IsRobber)
+            {
+                cc.HitRobber();
+                manager.HitRobber();
+            }
+            else
+            {
+                agentMover.PlayPassantClip();
+                agentMover.ReviveIn(Random.Range(2f, 3f));
+            }
             rigAgentManager.MakeRigid(cc.Velocity);
-            manager.HitRobber();
         }
     }
 }

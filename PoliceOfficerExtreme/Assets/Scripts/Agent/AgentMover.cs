@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class AgentMover : MonoBehaviour
 {
     [SerializeField]
+    private bool isRobber = false;
+    [SerializeField]
     private Animator animator = null;
     [SerializeField]
     private Transform[] possibleDestinations = null;
@@ -13,6 +15,10 @@ public class AgentMover : MonoBehaviour
     private Transform[] spawnPositions = null;
     [SerializeField]
     private float targetReachedThresh = 1f;
+    [SerializeField]
+    private AudioClip[] passantHitClips;
+    [SerializeField]
+    private AudioSource passantHitAudioSource;
 
     private NavMeshAgent agent;
     private RigAgentManager rigAgentManager;
@@ -45,6 +51,19 @@ public class AgentMover : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            if  (reviveIn > 0f)
+            {
+                reviveIn -= Time.deltaTime;
+                if (reviveIn <= 0f)
+                {
+                    rigAgentManager.MakeNavigationAgent();
+                    RandomlySpawn();
+                    RunToRandomTarget();
+                }
+            }
+        }
     }
 
     public void RunToRandomTarget()
@@ -68,5 +87,29 @@ public class AgentMover : MonoBehaviour
     public void SpawnAt(Vector3 point)
     {
         transform.position = point;
+    }
+
+    public bool IsRobber
+    {
+        get
+        {
+            return isRobber;
+        }
+    }
+
+    public void PlayPassantClip()
+    {
+        if (passantHitAudioSource.isPlaying == false)
+        {
+            passantHitAudioSource.clip = passantHitClips[Random.Range(0, passantHitClips.Length)];
+            passantHitAudioSource.Play();
+        }
+    }
+
+
+    private float reviveIn = 0f;
+    public void ReviveIn(float seconds)
+    {
+        reviveIn = seconds;
     }
 }

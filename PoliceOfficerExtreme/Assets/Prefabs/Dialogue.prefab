@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMesh: {fileID: 6398722958891099479}
-  secondsPerLetter: 0.1
+  secondsPerLetter: 0.01
 --- !u!1 &5827262557121530221
 GameObject:
   m_ObjectHideFlags: 0
