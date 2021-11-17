@@ -106,6 +106,18 @@ public class AgentMover : MonoBehaviour
         }
     }
 
+    public Transform[] PossibleWaypoints
+    {
+        get
+        {
+            return possibleDestinations;
+        }
+        set
+        {
+            possibleDestinations = value;
+        }
+    }
+
 
     private float reviveIn = 0f;
     public void ReviveIn(float seconds)

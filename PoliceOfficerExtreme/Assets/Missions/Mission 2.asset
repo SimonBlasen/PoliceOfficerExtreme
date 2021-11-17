@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 354b6a6509c880f49be2f7a012179b1b, type: 3}
-  m_Name: Mission 1
+  m_Name: Mission 2
   m_EditorClassIdentifier: 
   waypointsPrefab: {fileID: 75793330582490665, guid: b560a6bc84677574295b6fe0fe9ccef0, type: 3}
   missionAccomplishedScreen: {fileID: 1366048522738420593, guid: 1cec84640dc27a0479fecc875905c6fd, type: 3}
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: A robber is robbing a bank
+    dialogueText: SECOND MISSION
     clip: {fileID: 0}
   - eventType: 0
     dialogueText: Go to your car and catch him

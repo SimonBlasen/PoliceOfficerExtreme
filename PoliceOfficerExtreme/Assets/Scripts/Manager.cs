@@ -28,16 +28,26 @@ public class Manager : MonoBehaviour
     private AgentMover robberAgentMover = null;
 
     private int missionEventIndex = -1;
+    private int lastMissionIndex = -1;
     private Mission currentMission = null;
 
     private float blockSpaceKeyFor = 0f;
     private CarController cc;
 
+    private GameObject instRobberWaypoints = null;
+    private GameObject missionAccomplishedScreen = null;
+
+    private List<int> missionsDone = new List<int>();
+
     // Start is called before the first frame update
     void Start()
     {
+        missionsDone.Add(-1);
+
         cc = FindObjectOfType<CarController>();
+        Vector3 spawnPos = firstPersonPlayer.transform.position;
         IsFirstPerson = true;
+        firstPersonPlayer.transform.position = spawnPos;
         StartMission(Random.Range(0, missions.Length));
 
         robberRigAgentManager.IsVisible = false;
@@ -54,6 +64,14 @@ public class Manager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (missionAccomplishedScreen != null)
+                {
+                    Destroy(missionAccomplishedScreen);
+                    missionAccomplishedScreen = null;
+                    missionsDone.Add(lastMissionIndex);
+                    StartMission(-1);
+                }
+
                 if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.DIALOGUE)
                 {
                     blockSpaceKeyFor = 0.1f;
@@ -88,6 +106,8 @@ public class Manager : MonoBehaviour
     }
 
 
+
+
     private void nextMissionEvent()
     {
         missionEventIndex++;
@@ -95,6 +115,9 @@ public class Manager : MonoBehaviour
         if (missionEventIndex >= currentMission.missionEvents.Length)
         {
             Debug.Log("Mission finished");
+
+
+            missionAccomplishedScreen = Instantiate(currentMission.missionAccomplishedScreen);
             currentMission = null;
 
             return;
@@ -114,6 +137,12 @@ public class Manager : MonoBehaviour
 
     public void HitRobber()
     {
+        if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.DIALOGUE && (missionEventIndex + 1) < currentMission.missionEvents.Length && currentMission.missionEvents[missionEventIndex + 1].eventType == MissionEventType.KILL_ROBBER)
+        {
+            dialogue.StopShowingText();
+            nextMissionEvent();
+        }
+
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.KILL_ROBBER)
         {
             nextMissionEvent();
@@ -122,6 +151,12 @@ public class Manager : MonoBehaviour
 
     public void EnterCar()
     {
+        if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.DIALOGUE && (missionEventIndex + 1) < currentMission.missionEvents.Length && currentMission.missionEvents[missionEventIndex + 1].eventType == MissionEventType.ENTER_CAR)
+        {
+            dialogue.StopShowingText();
+            nextMissionEvent();
+        }
+
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.ENTER_CAR)
         {
             robberRigAgentManager.IsVisible = true;
@@ -134,6 +169,12 @@ public class Manager : MonoBehaviour
 
     public void ReturnPoliceStation()
     {
+        if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.DIALOGUE && (missionEventIndex + 1) < currentMission.missionEvents.Length && currentMission.missionEvents[missionEventIndex + 1].eventType == MissionEventType.RETURN_POLICE_STATION)
+        {
+            dialogue.StopShowingText();
+            nextMissionEvent();
+        }
+
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.RETURN_POLICE_STATION)
         {
             nextMissionEvent();
@@ -143,10 +184,52 @@ public class Manager : MonoBehaviour
     public void StartMission(int index)
     {
         missionEventIndex = -1;
+
+
+        // All missions done
+        if (missionsDone.Count > missions.Length)
+        {
+            Debug.Log("All missions done");
+            return;
+        }
+
+
+
+        if (index == -1)
+        {
+            int counter = 0;
+            while (missionsDone.Contains(index) && counter <= 400)
+            {
+                index = Random.Range(0, missions.Length);
+                counter++;
+            }
+        }
+
+
         currentMission = missions[index];
         robberRigAgentManager.IsVisible = false;
 
+        if (instRobberWaypoints != null)
+        {
+            Destroy(instRobberWaypoints);
+            instRobberWaypoints = null;
+        }
+
+        instRobberWaypoints = Instantiate(currentMission.waypointsPrefab);
+        instRobberWaypoints.transform.position = Vector3.zero;
+        instRobberWaypoints.transform.rotation = Quaternion.identity;
+
+        Transform[] waypoints = new Transform[instRobberWaypoints.transform.childCount];
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            waypoints[i] = instRobberWaypoints.transform.GetChild(i);
+        }
+
+        robberAgentMover.PossibleWaypoints = waypoints;
+
         //rigAgentManager.MakeRigid(Vector3.zero);
+
+        lastMissionIndex = index;
 
         nextMissionEvent();
     }

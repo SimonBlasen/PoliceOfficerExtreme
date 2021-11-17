@@ -8534,11 +8534,51 @@ MonoBehaviour:
   isRobber: 1
   animator: {fileID: 629508121}
   possibleDestinations:
-  - {fileID: 1797199404}
-  - {fileID: 588865020}
-  - {fileID: 226780883}
-  - {fileID: 1546524163}
-  - {fileID: 1178829682}
+  - {fileID: 555495802}
+  - {fileID: 556315841}
+  - {fileID: 1550713888}
+  - {fileID: 803353604}
+  - {fileID: 2133556068}
+  - {fileID: 943388390}
+  - {fileID: 1016837401}
+  - {fileID: 1801721751}
+  - {fileID: 556961075}
+  - {fileID: 300477576}
+  - {fileID: 402053415}
+  - {fileID: 2104751240}
+  - {fileID: 686139607}
+  - {fileID: 814898326}
+  - {fileID: 965601686}
+  - {fileID: 1566261962}
+  - {fileID: 2115185011}
+  - {fileID: 103814894}
+  - {fileID: 841291782}
+  - {fileID: 1602265764}
+  - {fileID: 1683855715}
+  - {fileID: 1996092962}
+  - {fileID: 1293651630}
+  - {fileID: 296604493}
+  - {fileID: 1234349812}
+  - {fileID: 2060983874}
+  - {fileID: 1933963559}
+  - {fileID: 1684273541}
+  - {fileID: 2066791165}
+  - {fileID: 1424301301}
+  - {fileID: 2147297147}
+  - {fileID: 1943892667}
+  - {fileID: 184899753}
+  - {fileID: 1512727783}
+  - {fileID: 1794148944}
+  - {fileID: 369895264}
+  - {fileID: 271174864}
+  - {fileID: 1291007324}
+  - {fileID: 2104172681}
+  - {fileID: 219356818}
+  - {fileID: 1149689390}
+  - {fileID: 205070932}
+  - {fileID: 1742326127}
+  - {fileID: 90731501}
+  - {fileID: 1578042528}
   spawnPositions:
   - {fileID: 1797199404}
   - {fileID: 588865020}
@@ -48589,17 +48629,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 248511425}
     - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
-      propertyPath: missions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
       propertyPath: robberRigAgentManager
       value: 
       objectReference: {fileID: 350569294}
-    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
-      propertyPath: missions.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8e3208a0cfa58a14c94550a40bfe2850, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
 --- !u!1001 &6200820515970692068

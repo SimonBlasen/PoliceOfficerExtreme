@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - {fileID: 11400000, guid: 04e539513a28d8c4dbf48ee6aa8627b1, type: 2}
+  - {fileID: 11400000, guid: a8153f5c00006f940b1faac3a159086b, type: 2}
   dialogue: {fileID: 0}
   dialogueClipSource: {fileID: 6142875725155417681}
   firstPersonPlayer: {fileID: 0}
@@ -53,6 +54,8 @@ MonoBehaviour:
   enterCarDistance: 3
   carPoliceStationDistance: 5
   policeStationPos: {fileID: 0}
+  robberRigAgentManager: {fileID: 0}
+  robberAgentMover: {fileID: 0}
 --- !u!82 &6142875725155417681
 AudioSource:
   m_ObjectHideFlags: 0
