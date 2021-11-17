@@ -20,6 +20,8 @@ public class CarController : MonoBehaviour
     private float steerSpeed = 12f;
     [SerializeField]
     private float steerAngle = 12f;
+    [SerializeField]
+    private AudioSource audioSourceHitDude;
 
     private Rigidbody rig;
 
