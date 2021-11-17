@@ -9369,7 +9369,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016252542}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: -0, y: 0.07214888, z: -0, w: 0.9973939}
   m_LocalPosition: {x: -6.661, y: 5.459, z: 5.073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9380,7 +9380,7 @@ Transform:
   - {fileID: 1212752174}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 8.275, z: 0}
 --- !u!54 &1016252544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9416,11 +9416,11 @@ MonoBehaviour:
   - {fileID: 24462575}
   - {fileID: 897858903}
   brakeTorque: 2500
-  throttleTorque: 420
+  throttleTorque: 200
   rpmThreshNotBrake: 0.1
   velocityThresh: 0.1
-  steerSpeed: 200
-  steerAngle: 30
+  steerSpeed: 300
+  steerAngle: 25
 --- !u!1 &1043016803
 GameObject:
   m_ObjectHideFlags: 0
