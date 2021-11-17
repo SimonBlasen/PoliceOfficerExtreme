@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26a15a38bfbcf7479ca6bf369ce9517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localOffset: {x: -0.37, y: -0.15, z: 0.34}
-  scale: 0.01
+  localOffset: {x: 0.19, y: -0.13, z: 0.34}
+  scale: 0.015
 --- !u!1 &6569560044623979442
 GameObject:
   m_ObjectHideFlags: 0
