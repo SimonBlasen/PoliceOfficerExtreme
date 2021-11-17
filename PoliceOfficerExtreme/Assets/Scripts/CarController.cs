@@ -96,6 +96,11 @@ public class CarController : MonoBehaviour
         }
     }
 
+    public void HitRobber()
+    {
+        audioSourceHitDude.Play();
+    }
+
     public bool IsActive
     {
         get; set;
