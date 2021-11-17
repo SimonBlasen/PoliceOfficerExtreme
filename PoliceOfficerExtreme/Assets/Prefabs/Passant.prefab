@@ -264,11 +264,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRobber: 0
   animator: {fileID: 7394562632708564615}
-  possibleDestinations: []
+  possibleDestinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPositions: []
   targetReachedThresh: 1
   passantHitClips:
-  - {fileID: 8300000, guid: 3da60f1c2b4dfdf48a5701318ebcd51b, type: 3}
+  - {fileID: 8300000, guid: 478ca4d82feb7cc40900111b798b7d18, type: 3}
+  - {fileID: 8300000, guid: 6ed451e029bf8e94c982e64cd1cdd5bb, type: 3}
   passantHitAudioSource: {fileID: 1817454018661354287}
 --- !u!195 &4524858681549923797
 NavMeshAgent:
