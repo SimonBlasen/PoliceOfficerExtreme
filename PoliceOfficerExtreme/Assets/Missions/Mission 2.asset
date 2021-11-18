@@ -17,7 +17,7 @@ MonoBehaviour:
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: SECOND MISSION
+    dialogueText: There is another dude robbed our favourite Donut Store
     clip: {fileID: 0}
   - eventType: 0
     dialogueText: Go to your car and catch him
@@ -38,5 +38,5 @@ MonoBehaviour:
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Well done
+    dialogueText: 'The City is safe again! '
     clip: {fileID: 0}
