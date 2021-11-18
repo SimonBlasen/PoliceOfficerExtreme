@@ -17,26 +17,32 @@ MonoBehaviour:
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: A robber is robbing a bank
+    dialogueText: Good Morning Officer!
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Go to your car and catch him
+    dialogueText: Stop Eating Donuts and go into your car.
     clip: {fileID: 0}
   - eventType: 1
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: He is escaping. Run him over!!!!!
+    dialogueText: There was a Bank robbery! You have to get him.
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: Just try making him unable to escape with your car!
     clip: {fileID: 0}
   - eventType: 3
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Niiice
+    dialogueText: Well done! Good old police work!
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: Bring back the car to the police station now.
     clip: {fileID: 0}
   - eventType: 2
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Well done
+    dialogueText: Well done!
     clip: {fileID: 0}
