@@ -15406,8 +15406,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9137255, g: 0.7770281, b: 0.7019608, a: 0.34117648}
-      maxColor: {r: 0.7075472, g: 0.6514774, b: 0.5573603, a: 0.23529412}
+      minColor: {r: 0.7019608, g: 0.9137255, b: 0.89781994, a: 0.13333334}
+      maxColor: {r: 0.7075472, g: 0.6514774, b: 0.5573603, a: 0.09411765}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -15469,8 +15469,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 30
-      minScalar: 20
+      scalar: 20
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -73961,6 +73961,10 @@ PrefabInstance:
     - target: {fileID: 6569560044460060657, guid: d7f91e602e49f35479ff925a440f18b6, type: 3}
       propertyPath: m_Name
       value: OfficerChief
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569560044460060657, guid: d7f91e602e49f35479ff925a440f18b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6569560044460060659, guid: d7f91e602e49f35479ff925a440f18b6, type: 3}
       propertyPath: m_RootOrder
