@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354b6a6509c880f49be2f7a012179b1b, type: 3}
+  m_Name: Mission 3
+  m_EditorClassIdentifier: 
+  waypointsPrefab: {fileID: 75793330582490665, guid: b560a6bc84677574295b6fe0fe9ccef0, type: 3}
+  missionAccomplishedScreen: {fileID: 1366048522738420593, guid: 1cec84640dc27a0479fecc875905c6fd, type: 3}
+  startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
+  missionEvents:
+  - eventType: 0
+    dialogueText: There is another dude robbed our favourite Donut Store
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: Go to your car and catch him
+    clip: {fileID: 0}
+  - eventType: 1
+    dialogueText: 
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: He is escaping. Run him over!!!!!
+    clip: {fileID: 0}
+  - eventType: 3
+    dialogueText: 
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: Niiice
+    clip: {fileID: 0}
+  - eventType: 2
+    dialogueText: 
+    clip: {fileID: 0}
+  - eventType: 0
+    dialogueText: 'The City is safe again! '
+    clip: {fileID: 0}

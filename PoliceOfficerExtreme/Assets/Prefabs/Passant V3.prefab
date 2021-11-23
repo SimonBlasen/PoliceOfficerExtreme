@@ -337,8 +337,8 @@ MonoBehaviour:
   - {fileID: 0}
   targetReachedThresh: 1
   passantHitClips:
-  - {fileID: 8300000, guid: 478ca4d82feb7cc40900111b798b7d18, type: 3}
-  - {fileID: 8300000, guid: 6ed451e029bf8e94c982e64cd1cdd5bb, type: 3}
+  - {fileID: 8300000, guid: 0f8a675257636e944a4f81b031a2f80b, type: 3}
+  - {fileID: 8300000, guid: d9e5e478cd92c4a4da9ba7595f7d33f7, type: 3}
   passantHitAudioSource: {fileID: 2350463939155176383}
 --- !u!114 &5846797410962088751
 MonoBehaviour:

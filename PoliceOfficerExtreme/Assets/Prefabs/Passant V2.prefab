@@ -362,8 +362,9 @@ MonoBehaviour:
   - {fileID: 0}
   targetReachedThresh: 1
   passantHitClips:
-  - {fileID: 8300000, guid: 478ca4d82feb7cc40900111b798b7d18, type: 3}
-  - {fileID: 8300000, guid: 6ed451e029bf8e94c982e64cd1cdd5bb, type: 3}
+  - {fileID: 8300000, guid: f7c6d31d842957448863c1dc004d5935, type: 3}
+  - {fileID: 8300000, guid: d61858af9c48d714aa2812f8c3a77912, type: 3}
+  - {fileID: 8300000, guid: 915ec4acdd1d0e14fae9412ef6796245, type: 3}
   passantHitAudioSource: {fileID: 5390195901235456675}
 --- !u!195 &7871923462874154073
 NavMeshAgent:

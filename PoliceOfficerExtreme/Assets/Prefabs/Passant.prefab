@@ -313,10 +313,9 @@ MonoBehaviour:
   spawnPositions: []
   targetReachedThresh: 1
   passantHitClips:
-  - {fileID: 8300000, guid: 478ca4d82feb7cc40900111b798b7d18, type: 3}
-  - {fileID: 8300000, guid: 6ed451e029bf8e94c982e64cd1cdd5bb, type: 3}
-  - {fileID: 8300000, guid: 1399efc4c607d874fb609a35960e4121, type: 3}
-  - {fileID: 8300000, guid: 8cfa073d8af0623478e064da62b0a750, type: 3}
+  - {fileID: 8300000, guid: f7c6d31d842957448863c1dc004d5935, type: 3}
+  - {fileID: 8300000, guid: d61858af9c48d714aa2812f8c3a77912, type: 3}
+  - {fileID: 8300000, guid: 915ec4acdd1d0e14fae9412ef6796245, type: 3}
   passantHitAudioSource: {fileID: 1817454018661354287}
 --- !u!195 &4524858681549923797
 NavMeshAgent:
