@@ -17,26 +17,29 @@ MonoBehaviour:
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: There is another dude robbed our favourite Donut Store
-    clip: {fileID: 0}
+    dialogueText: "Unser Donutladen wurde \xFCberfallen! Schnell!"
+    clip: {fileID: 8300000, guid: c904215629600c34a86324e91b43b50b, type: 3}
   - eventType: 0
-    dialogueText: Go to your car and catch him
-    clip: {fileID: 0}
+    dialogueText: Ab ins Auto. Keine Zeit zu verlieren!
+    clip: {fileID: 8300000, guid: 24cf13c2848d8f648a6259684e202385, type: 3}
   - eventType: 1
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: He is escaping. Run him over!!!!!
-    clip: {fileID: 0}
+    dialogueText: Er haut ab. Fahr ihn um!
+    clip: {fileID: 8300000, guid: 172b9ccd9a96564429b5641d85b148b8, type: 3}
   - eventType: 3
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Niiice
-    clip: {fileID: 0}
+    dialogueText: Nice! Sehr gute Arbeit!
+    clip: {fileID: 8300000, guid: 958b087f95f82ff47b3294f5af86f205, type: 3}
+  - eventType: 0
+    dialogueText: "Fahr das Auto zur\xFCck zur Station"
+    clip: {fileID: 8300000, guid: 596f5f1e199f77a49a46a7099d0a5d17, type: 3}
   - eventType: 2
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: 'The City is safe again! '
-    clip: {fileID: 0}
+    dialogueText: Die Stadt ist wieder sicher!
+    clip: {fileID: 8300000, guid: 66907791b501f6a4196596cf6f9277c3, type: 3}

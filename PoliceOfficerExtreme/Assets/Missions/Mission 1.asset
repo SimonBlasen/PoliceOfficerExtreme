@@ -17,32 +17,32 @@ MonoBehaviour:
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: Good Morning Officer!
-    clip: {fileID: 0}
+    dialogueText: Juten tach Officer. Die Arbeit ruft
+    clip: {fileID: 8300000, guid: 5b6506185611ed946a29030004659fef, type: 3}
   - eventType: 0
-    dialogueText: Stop Eating Donuts and go into your car.
-    clip: {fileID: 0}
+    dialogueText: Ab zum Streifenwagen und los gehts.
+    clip: {fileID: 8300000, guid: c17d889ec15e7b849bd1287600cc3a6b, type: 3}
   - eventType: 1
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: There was a Bank robbery! You have to get him.
-    clip: {fileID: 0}
+    dialogueText: Es gab einen Bankraub. Die Geldscheine flattern im Wind!
+    clip: {fileID: 8300000, guid: af870a6e7ebcee049982b6c8c2cfb049, type: 3}
   - eventType: 0
-    dialogueText: Just try making him unable to escape with your car!
-    clip: {fileID: 0}
+    dialogueText: "Mach ihn Fluchtunf\xE4hig mit deinem Wagen."
+    clip: {fileID: 8300000, guid: 99645bac23d107c4b8b81cd9a07a4891, type: 3}
   - eventType: 3
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Well done! Good old police work!
-    clip: {fileID: 0}
+    dialogueText: Gute alte Polizeiarbeit! Gut gemacht!
+    clip: {fileID: 8300000, guid: 49249bfaf3421834b802ddc05e77fd6a, type: 3}
   - eventType: 0
-    dialogueText: Bring back the car to the police station now.
-    clip: {fileID: 0}
+    dialogueText: "Bring das Auto zur\xFCck zur Polizeistation."
+    clip: {fileID: 8300000, guid: 4b2f542814746264fae597d6343cc0a6, type: 3}
   - eventType: 2
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Well done!
-    clip: {fileID: 0}
+    dialogueText: Gute Arbeit Kollegin!
+    clip: {fileID: 8300000, guid: fcb4f473b62611840844ba8e83c1a253, type: 3}

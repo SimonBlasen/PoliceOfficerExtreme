@@ -17,26 +17,29 @@ MonoBehaviour:
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}
   missionEvents:
   - eventType: 0
-    dialogueText: There is another dude robbed our favourite Donut Store
-    clip: {fileID: 0}
+    dialogueText: Hallo Kollegin! Etwas schreckliches ist passiert!
+    clip: {fileID: 8300000, guid: 29a90faebb804f14fb6ccc4b666852bd, type: 3}
   - eventType: 0
-    dialogueText: Go to your car and catch him
-    clip: {fileID: 0}
+    dialogueText: "All die \xDCberf\xE4lle waren eine Ablenkung!"
+    clip: {fileID: 8300000, guid: 2c163008cd0fc9448bcbffc1a21537f0, type: 3}
+  - eventType: 0
+    dialogueText: Schnell ins Auto!
+    clip: {fileID: 8300000, guid: 88538395885578040960c89e5c31a765, type: 3}
   - eventType: 1
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: He is escaping. Run him over!!!!!
-    clip: {fileID: 0}
+    dialogueText: Waffen, Geld, Papiere! Du musst ihn ausschalten
+    clip: {fileID: 8300000, guid: cd0a01818265fbc4b82d4f0a3541e217, type: 3}
   - eventType: 3
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: Niiice
-    clip: {fileID: 0}
+    dialogueText: Ich wusste du schaffst das! Juhu!
+    clip: {fileID: 8300000, guid: 83edfcffa2e58cd439a4d0ae9b0dd483, type: 3}
   - eventType: 2
     dialogueText: 
     clip: {fileID: 0}
   - eventType: 0
-    dialogueText: 'The City is safe again! '
-    clip: {fileID: 0}
+    dialogueText: "Auf gehts das m\xFCssen wir mit einem Donut feiern!"
+    clip: {fileID: 8300000, guid: 49bcd73a361f2a94486638383bb796de, type: 3}

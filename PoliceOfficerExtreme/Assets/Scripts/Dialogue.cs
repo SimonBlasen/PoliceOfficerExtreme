@@ -9,6 +9,8 @@ public class Dialogue : MonoBehaviour
     private TextMeshProUGUI textMesh = null;
     [SerializeField]
     private float secondsPerLetter = 0.1f;
+    [SerializeField]
+    private Animator chiefAnim;
 
 
     private float counter = 0f;
@@ -43,6 +45,7 @@ public class Dialogue : MonoBehaviour
 
     public void ShowDialogueText(string text)
     {
+        chiefAnim.SetBool("isTalking", true);
         textRem = text;
         textMesh.text = "";
         counter = 0f;
@@ -50,6 +53,7 @@ public class Dialogue : MonoBehaviour
 
     public void StopShowingText()
     {
+        chiefAnim.SetBool("isTalking", false);
         textRem = "";
         textMesh.text = "";
     }

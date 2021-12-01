@@ -576,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMesh: {fileID: 6398722958891099479}
   secondsPerLetter: 0.01
+  chiefAnim: {fileID: 6648119518916178591}
 --- !u!1 &4141625942004297114
 GameObject:
   m_ObjectHideFlags: 0
