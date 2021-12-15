@@ -143,6 +143,18 @@ public class RigAgentManager : MonoBehaviour
         }
     }
 
+    public MeshRenderer[] NonRigidMeshes
+    {
+        get
+        {
+            return nonRigidMeshes;
+        }
+        set
+        {
+            nonRigidMeshes = value;
+        }
+    }
+
 
     private bool isRigidPerson = false;
     public bool IsRigidPerson

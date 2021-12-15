@@ -26,6 +26,8 @@ public class Manager : MonoBehaviour
     private RigAgentManager robberRigAgentManager = null;
     [SerializeField]
     private AgentMover robberAgentMover = null;
+    [SerializeField]
+    private RobberSwitcher robberSwitcher = null;
 
     private int missionEventIndex = -1;
     private int lastMissionIndex = -1;
@@ -159,6 +161,8 @@ public class Manager : MonoBehaviour
 
         if (currentMission != null && currentMission.missionEvents[missionEventIndex].eventType == MissionEventType.ENTER_CAR)
         {
+            robberSwitcher.SetRobberModels(currentMission.prefabRobberModel, currentMission.prefabRobberModelRig);
+
             robberRigAgentManager.IsVisible = true;
             robberRigAgentManager.MakeNavigationAgent();
             robberAgentMover.SpawnAt(currentMission.startRunningPosition);
@@ -185,6 +189,7 @@ public class Manager : MonoBehaviour
     {
         missionEventIndex = -1;
 
+        robberSwitcher.DestroyInstances();
 
         // All missions done
         if (missionsDone.Count > missions.Length)
