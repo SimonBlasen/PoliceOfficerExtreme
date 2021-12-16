@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354b6a6509c880f49be2f7a012179b1b, type: 3}
   m_Name: Mission 3
   m_EditorClassIdentifier: 
-  prefabRobberModel: {fileID: 636163635935818167, guid: ff0006cf07378f741bcfa2ec0a6febe9, type: 3}
-  prefabRobberModelRig: {fileID: 7890290094307823167, guid: b15bb5cc6a81cd84d8a51915f0f6cfd1, type: 3}
+  prefabRobberModel: {fileID: 636163635935818167, guid: ca0482e6330980b4c8e9b70527cc9127, type: 3}
+  prefabRobberModelRig: {fileID: 7890290094307823167, guid: 8f4151f236d20ee41a57342b39d184b3, type: 3}
   waypointsPrefab: {fileID: 75793330582490665, guid: b560a6bc84677574295b6fe0fe9ccef0, type: 3}
   missionAccomplishedScreen: {fileID: 1366048522738420593, guid: 1cec84640dc27a0479fecc875905c6fd, type: 3}
   startRunningPosition: {x: 9.28, y: 5.41, z: 27.44}

@@ -10925,7 +10925,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -62376,6 +62376,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 69b0bc9c924646d4c87f786af6684688, type: 3}
   - {fileID: 8300000, guid: 9a2b8d19f8f84e346ac22cb620896a0b, type: 3}
   - {fileID: 8300000, guid: d092b7b29ce13da4fbb9db37f2a07630, type: 3}
+  - {fileID: 8300000, guid: a5a9a2feb7da0ed479518517bc923c5d, type: 3}
   sender: 0
   radioNames:
   - off
@@ -62383,6 +62384,7 @@ MonoBehaviour:
   - "Pok\xE9 Channel"
   - Sherry Rich Radio
   - METAL
+  - PoE Main Mukke
   text: {fileID: 8903957353543013075}
 --- !u!82 &1325369094
 AudioSource:
@@ -95628,6 +95630,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae2d732adaa18104fac43d8bfe17960d, type: 3}
+--- !u!1001 &2947841619760620822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2947841620918946136, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_Name
+      value: Waypoints Robber 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947841620918946137, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea471dc031519af4c80818e00de4a6ac, type: 3}
 --- !u!4 &3312931083111527131
 Transform:
   m_ObjectHideFlags: 0
@@ -96238,9 +96297,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 248511425}
     - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
+      propertyPath: missions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
       propertyPath: robberRigAgentManager
       value: 
       objectReference: {fileID: 350569294}
+    - target: {fileID: 8617478472581782637, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
+      propertyPath: missions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 94f09b6ced696dc45a3e49eaae023a8e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42fb80f3bfed1b41861173e1dea7a72, type: 3}
 --- !u!1001 &6049801398133302016
