@@ -12,6 +12,9 @@ public enum MissionEventType
 [CreateAssetMenu(fileName = "Mission", menuName = "ScriptableObjects/Mission", order = 1)]
 public class Mission : ScriptableObject
 {
+    public GameObject prefabRobberModel;
+    public GameObject prefabRobberModelRig;
+
     public GameObject waypointsPrefab;
     public GameObject missionAccomplishedScreen;
     public Vector3 startRunningPosition;
